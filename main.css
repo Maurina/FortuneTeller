@@ -1,7 +1,6 @@
 body{
+    margin: 0 auto;
     max-width: 1200px;
-    padding-left: 4%;
-    padding-right: 4%;
 }
 
 header{
@@ -17,7 +16,7 @@ h1{
     color: #fff;
     font-size: 2rem;
     padding-top: 4%;
-    padding-left: 2%;
+    padding-left: 4%;
     
 }
 
@@ -25,23 +24,35 @@ h2{
     color:#fff;
     font-size: 1.5rem;
     padding-bottom: 4%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
+
+.wrapper{
+    padding-left: 4%;
+}
 h3{
     color: orangered;
     font-size: 2rem;
     font-weight: bold;
+    
 }
 
 h4{
     color: orangered;
     font-size: 1rem;
     font-weight: bold;
+
 }
+
+
 
 li{
    list-style-type: disc; 
+}
+
+.fortune{
+    padding-left: 4%;
 }
 
 footer{
@@ -49,7 +60,7 @@ footer{
 }
 
 p{
-    font-size: .8rem;
+    font-size: .6rem;
     color: white;
     text-align: center;
 }
