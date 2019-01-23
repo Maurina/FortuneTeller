@@ -1,44 +1,94 @@
 
-
-function monthNumber () {
-    let month = Math.floor((Math.random()*12)+1);
-    return month;
+function randomNumberGenerator (amount){
+    let randomNumber = Math.floor((Math.random()*amount)+1);
+    return randomNumber;
 }
 
-function monthDay (){
-    let day = Math.floor((Math.random()*30)+1);
-    return day;
-}
 
-function fortuneNumber() {
-    let fotune = Math.floor((Math.random()*5)+1);
-    return fortune;
-}
 
-switch (month){
-    case 1: "January";
-    case 2: "February";
-    case 3: "March";
-    case 4: "April";
-    case 5: "May";
-    case 6: "June";
-    case 7: "July";
-    case 8: "August";
-    case 9: "September";
-    case 10: "October";
-    case 11: "November";
-    case 12: "December";
-    default: "All Year";
-}
-
- switch(fortune){
-     case 1: "You will win big today.";
-     case 2: "Beware danger is coming.";
-     case 3: "You will find a box of chocolates.";
-     case 4: "You will break a bone.";
-     case 5: "You will bring much happiness to your family.";
-     default: "Death is looming near.";
-
+function getMonth(season){
+    let monthName;
+    switch (Number(season)){
+    case 1: 
+    monthName ="January";
+    break;
+    case 2: 
+    monthName ="February";
+    break;
+    case 3: 
+    monthName ="March";
+    break;
+    case 4: 
+    monthName ="April";
+    break;
+    case 5: 
+    monthName ="May";
+    break;
+    case 6: 
+    monthName ="June";
+    break;
+    case 7: 
+    monthName ="July";
+    break;
+    case 8: 
+    monthName ="August";
+    break;
+    case 9: 
+    monthName ="September";
+    break;
+    case 10:
+    monthName = "October";
+    break;
+    case 11:
+    monthName = "November";
+    break;
+    case 12:
+    monthName = "December";
+    break;
+    default:
+    monthName = "All Year";
+    break;
 }//end switch
+return monthName;
+}//end function getMonth
 
-document.getElementById('fortune').innerHTML = `On $(month), (day) $(fortune)`;
+function getFortune(note){
+    let message;
+ switch(Number(note)){
+     case 1:
+     message = "You will win big today.";
+     break;
+     case 2: 
+     message ="Beware danger is coming.";
+     break;
+     case 3: 
+     message ="You will find a box of chocolates.";
+     break;
+     case 4: 
+     message ="You will break a bone.";
+     break;
+     case 5: 
+     message ="You will bring much happiness to your family.";
+     break;
+     default: 
+     message ="Death is looming near.";
+     break;
+}//end switch
+return message;
+console.log(message)
+}//end getFortune
+
+let month = randomNumberGenerator(12);
+
+let day = randomNumberGenerator(30);
+
+let fortuneNumber = randomNumberGenerator(5);
+
+
+console.log(month)
+console.log(day)
+console.log(fortuneNumber)
+
+let monthNameHere = getMonth(month)
+let fortuneMessage = getFortune(fortuneNumber)
+document.getElementById('fortune').innerHTML = `On ${monthNameHere}, ${day} :  ${fortuneMessage}`;
